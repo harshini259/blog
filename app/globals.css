@@ -2,26 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+body {
+  content: "";
+  animation: scroll 60s linear infinite;
+  background-image: radial-gradient(circle, hsl(var(--nextui-foreground-300)) 2px,transparent 0);
+  background-size: 100px 150px;
+  width: 100%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@keyframes scroll {
+  to {
+    background-position: 0 -500px;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.explore-background {
+  background-image: url('/explore_2.png');
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: contain;
 }
