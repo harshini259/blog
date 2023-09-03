@@ -27,8 +27,8 @@ function LogoText() {
   return (
     <p className="text-2xl flex font-semibold">
       {
-        logo.map(element => {
-          return <span className="p-0.5">{element}</span>
+        logo.map((element, index) => {
+          return <span key={index} className="p-0.5">{element}</span>
         })
       }
     </p>);
@@ -38,7 +38,7 @@ function Page1() {
   return(<div className="m-8 explore-background h-[70vh]">
     <div className="w-3/6">
       <div className="pt-8 pb-8 text-5xl"><span style={{"color":"#586994"}}>LEARN</span> THROUGH PROJECTS</div>
-      <div className="text-xl">Ready to ditch the textbooks and dive into the world of coding with your sleeves rolled up? Welcome to a journey where we learn by doing, one project at a time. Whether you're into software wizardry, full-stack finesse, or AI enchantment, get ready to unleash your inner developer. Let's code, create, and conquer!</div><br/>
+      <div className="text-xl">Ready to ditch the textbooks and dive into the world of coding with your sleeves rolled up? Welcome to a journey where we learn by doing, one project at a time. Whether you are into software wizardry, full-stack finesse, or AI enchantment, get ready to unleash your inner developer. Lets code, create, and conquer!</div><br/>
     </div>
   </div>);
 }
